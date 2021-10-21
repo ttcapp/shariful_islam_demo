@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shariful_islam_demo/utills/all_colors.dart';
+import 'package:shariful_islam_demo/utills/all_strings.dart';
 
 String imgSrcAvater="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcD4rxeGURBYoxQlcWdAP3op6XIjmWGogYXg&usqp=CAU";
 class MyHomePage extends StatefulWidget {
@@ -18,7 +20,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("SharifulIslam"),
+        backgroundColor: AllColors.appBarClr,
+        title: Text(AllStrings.sharifulIslam),
       ),
       body: Column(
         children: [
@@ -51,14 +54,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         Column(
                           children: [
-                            Text("3485",
+                            Text(AllStrings.post3485,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                             ),
-                            Text("Posts"),
+                            Text(AllStrings.posts),
                           ],
                         ),
                         SizedBox(
@@ -66,14 +69,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         Column(
                           children: [
-                            Text("42M",
+                            Text(AllStrings.follower42M,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                             ),
-                            Text("Followers"),
+                            Text(AllStrings.followers),
                           ],
                         ),
                         SizedBox(
@@ -81,14 +84,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         Column(
                           children: [
-                            Text("28M",
+                            Text(AllStrings.following28M,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                             ),
-                            Text("Following"),
+                            Text(AllStrings.following),
                           ],
                         ),
                       ],
@@ -102,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: const EdgeInsets.only(
                                   top: 5,bottom: 5,left: 25,right: 25
                               ),
-                              child: Text("Message"),
+                              child: Text(AllStrings.message),
                             ),
                             decoration: BoxDecoration(
                               border: Border.all(
