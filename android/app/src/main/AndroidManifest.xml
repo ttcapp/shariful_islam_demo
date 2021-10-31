@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shariful_islam_demo">
    <application
-        android:label="shariful_islam_demo"
+        android:label="App Demo"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

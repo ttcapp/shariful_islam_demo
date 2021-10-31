@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shariful_islam_demo/listview_page.dart';
+import 'package:shariful_islam_demo/log_in.dart';
 import 'package:shariful_islam_demo/utills/all_colors.dart';
 import 'package:shariful_islam_demo/utills/all_strings.dart';
 
@@ -25,6 +27,20 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
+          ElevatedButton(
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>LogIn()));
+              }, child: Text("LOG IN")
+          ),
+
+
+          ElevatedButton(
+              onPressed: (){
+               Navigator.push(context,
+                   MaterialPageRoute(builder: (context)=>ListViewPage()));
+              }, child: Text("Go To Second Page")
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
