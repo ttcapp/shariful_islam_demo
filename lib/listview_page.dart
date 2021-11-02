@@ -34,6 +34,7 @@ class _ListViewPageState extends State<ListViewPage> {
           ),
           Expanded(
             child: ListView.builder(
+              shrinkWrap: true,
               itemCount: stdName.length,
                 itemBuilder: (context,index){
                   return Padding(

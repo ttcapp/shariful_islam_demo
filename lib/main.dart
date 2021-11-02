@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shariful_islam_demo/log_in.dart';
 import 'package:shariful_islam_demo/my_home_page.dart';
 import 'package:shariful_islam_demo/second_page.dart';
 import 'package:slide_drawer/slide_drawer.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       navigatorKey: navigatorkey,
       home:  SlideDrawer(
-        offsetFromRight: 320,
+        offsetFromRight: 50,
         backgroundGradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
               icon: Icons.settings,
               onTap: (){}),
         ],
-        child: MyHomePage(),
+        child: LogIn(),
       ),
     );
   }

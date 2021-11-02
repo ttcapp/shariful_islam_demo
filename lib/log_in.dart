@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shariful_islam_demo/my_home_page.dart';
 import 'package:shariful_islam_demo/utills/all_colors.dart';
 
 class LogIn extends StatefulWidget {
@@ -8,6 +9,11 @@ class LogIn extends StatefulWidget {
   _LogInState createState() => _LogInState();
 }
 //for global variables
+String _email= "sharifulislam@gmail.com";
+String _password= "123456";
+TextEditingController emailCont= TextEditingController();
+TextEditingController passCont= TextEditingController();
+
 final _formkey= GlobalKey<FormState>();
 
 class _LogInState extends State<LogIn> {
@@ -37,6 +43,15 @@ class _LogInState extends State<LogIn> {
                   height: 18,
                 ),
                 TextFormField(
+                  controller: emailCont,
+                  validator: (text){
+                    if(text== null || text.isEmpty){
+                      return"The Field is Empty";
+                    }
+                    else if(text != _email){
+                      return"Invalid Email";
+                    }
+                  },
                   autofocus: true,
                   decoration: InputDecoration(
                     labelText: "Email",
@@ -60,6 +75,15 @@ class _LogInState extends State<LogIn> {
                 ),
                 SizedBox(height: 28,),
                 TextFormField(
+                  controller: passCont,
+                  validator: (text){
+                    if(text== null || text.isEmpty){
+                      return"The Field is Empty";
+                    }
+                    else if(text != _password){
+                      return"Invalid Password";
+                    }
+                  },
                   obscureText: true,
                   autofocus: true,
                   decoration: InputDecoration(
@@ -91,6 +115,11 @@ class _LogInState extends State<LogIn> {
                   ),
                     onPressed:(){
 
+                    if(_formkey.currentState!.validate()){
+                      Navigator.push(context,
+                      MaterialPageRoute(builder:(context)
+                      =>MyHomePage()));
+                    }
                     },
                       child: Container(
                         width: 100,
