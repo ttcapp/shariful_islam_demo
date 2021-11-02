@@ -3,6 +3,7 @@ import 'package:shariful_islam_demo/listview_page.dart';
 import 'package:shariful_islam_demo/log_in.dart';
 import 'package:shariful_islam_demo/utills/all_colors.dart';
 import 'package:shariful_islam_demo/utills/all_strings.dart';
+import 'package:slide_drawer/slide_drawer.dart';
 
 String imgSrcAvater="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcD4rxeGURBYoxQlcWdAP3op6XIjmWGogYXg&usqp=CAU";
 class MyHomePage extends StatefulWidget {
@@ -21,6 +22,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          // call toggle from SlideDrawer to alternate between open and close
+          // when pressed menu button
+          onPressed: () => SlideDrawer.of(context)!.toggle(),
+        ),
         centerTitle: true,
         backgroundColor: AllColors.appBarClr,
         title: Text(AllStrings.sharifulIslam),
