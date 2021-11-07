@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shariful_islam_demo/my_home_page.dart';
+import 'package:shariful_islam_demo/sign_up.dart';
 import 'package:shariful_islam_demo/utills/all_colors.dart';
 
 class LogIn extends StatefulWidget {
@@ -122,7 +123,7 @@ class _LogInState extends State<LogIn> {
                     }
                     },
                       child: Container(
-                        width: 100,
+                        width: 150,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -135,6 +136,33 @@ class _LogInState extends State<LogIn> {
                           ],
                         ),
                       )
+                ),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        primary: AllColors.appThemeClr
+                    ),
+                    onPressed:(){
+                      Navigator.push(context,
+                      MaterialPageRoute(builder:
+                      (context)=>SignUp()),
+                      );
+
+                      },
+
+                    child: Container(
+                      width: 150,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.account_circle),
+                          SizedBox(width: 8,),
+                          Text("Sign Up", style: TextStyle(
+                              fontSize: 20
+                          ) ,
+                          ),
+                        ],
+                      ),
+                    )
                 ),
               ],
             ),

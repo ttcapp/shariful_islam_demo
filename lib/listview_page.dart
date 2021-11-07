@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class ListViewPage extends StatefulWidget {
   const ListViewPage({Key? key}) : super(key: key);
@@ -26,6 +27,7 @@ class _ListViewPageState extends State<ListViewPage> {
       ),
       body: Column(
         children: [
+
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text("The name of students of Batch-D",
@@ -39,10 +41,15 @@ class _ListViewPageState extends State<ListViewPage> {
                 itemBuilder: (context,index){
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(stdName[index],
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 20,
-                    color: Colors.blue),),
+                    child: ElevatedButton(
+                      onPressed: () {
+
+                      },
+                      child: Text(stdName[index],
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 20,
+                      color: Colors.deepOrange),),
+                    ),
                   );
                 }
             ),
